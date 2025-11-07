@@ -13,7 +13,7 @@ public class Function
     {
         dynamic deserialize = JsonConvert.DeserializeObject(input.Body);
 
-        string payload = JsonConvert.SerializeObject(new { text = $"Issue Created: {deserialize.issue.html_url}" });
+        string payload = JsonConvert.SerializeObject(new { text = $"Issue Created: {deserialize.issue.url}" });
 
         var client = new HttpClient();
 
