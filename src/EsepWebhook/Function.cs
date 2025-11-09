@@ -1,3 +1,10 @@
+using System.Text;
+using Amazon.Lambda.APIGatewayEvents;
+using Amazon.Lambda.Core;
+using Newtonsoft.Json;
+
+[assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.SystemTextJson.DefaultLambdaJsonSerializer))]
+
 namespace EsepWebhook;
 
 public class Function
